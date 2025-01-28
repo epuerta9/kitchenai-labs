@@ -1,0 +1,16 @@
+[project]
+name = "evals-for-lab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=0.6.3",
+    "deepeval>=2.2.6",
+    "ipykernel>=6.29.5",
+    "marimo>=0.10.17",
+    "nbformat>=5.10.4",
+    "nest-asyncio>=1.6.0",
+    "openai>=1.60.1",
+    "pypdf>=5.2.0",
+]
