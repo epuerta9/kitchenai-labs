@@ -1,0 +1,40 @@
+{
+    "name": "LlamaIndex Notebooks",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-vscode-remote.remote-containers"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "jupyter.notebookFileRoot": "${workspaceFolder}",
+                // Automatically create virtual env per notebook
+                "python.terminal.activateEnvironment": true,
+                "python.terminal.activateEnvInCurrentTerminal": true
+            }
+        }
+    },
+    
+    // Skip installing requirements.txt globally - we'll handle per notebook
+    // "postCreateCommand": "pip install -r requirements.txt",
+    
+    // Mount the workspace
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "workspaceFolder": "/workspace",
+    
+    // Forward Jupyter port
+    "forwardPorts": [8888, 8000],
+    
+    // Keep container running
+    "shutdownAction": "none",
+    
+    // Add features for better Python development
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        }
+    }
+} 

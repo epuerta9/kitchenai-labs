@@ -5,6 +5,10 @@ __pycache__/
 
 # C extensions
 *.so
+chroma_db/
+.vector_db
+data/*
+data/A17_FlightPlan.pdf
 
 # Distribution / packaging
 .Python
@@ -169,3 +173,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+.venv_*
+__pycache__/
+.ipynb_checkpoints/
+.env
