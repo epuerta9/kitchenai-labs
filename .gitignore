@@ -2,14 +2,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+storage/
 # C extensions
 *.so
 chroma_db/
 .vector_db
 data/*
 data/A17_FlightPlan.pdf
-
+.webui_secret_key
 # Distribution / packaging
 .Python
 build/
